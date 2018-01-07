@@ -21,14 +21,22 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qn-W3-uNi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fui-4O-Zv3">
-                                <rect key="frame" x="16" y="617" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fui-4O-Zv3">
+                                <rect key="frame" x="20" y="617" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="D8L-i8-ebi"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9O-W5-wCG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fui-4O-Zv3" secondAttribute="bottom" constant="20" id="Bde-Jt-oMq"/>
+                            <constraint firstItem="fui-4O-Zv3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DNt-2J-HSt"/>
                             <constraint firstItem="9qn-W3-uNi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TUA-8q-HrI"/>
                             <constraint firstItem="9qn-W3-uNi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eCl-Bz-Be8"/>
                             <constraint firstItem="9qn-W3-uNi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hbq-rW-6cy"/>
