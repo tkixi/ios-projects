@@ -12,6 +12,21 @@ import ARKit
 
 class ViewController: UIViewController {
 
+    @IBAction func reset(_ sender: Any) {
+        self.restartSession()
+    }
+    
+    func restartSession() {
+        self.sceneView.session.pause()
+        self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop)  in
+            node.removeFromParentNode()
+    }
+        self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        
+    }
+        
+
+    
     @IBAction func add(_ sender: Any) {
         let node = SCNNode()
         node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
@@ -37,4 +52,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
